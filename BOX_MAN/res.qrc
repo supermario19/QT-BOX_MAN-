@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="blackground">blackground.bmp</file>
+        <file alias="wall">wall_right.bmp</file>
+        <file alias="floor">floor.bmp</file>
+        <file alias="des">des.bmp</file>
+        <file alias="box">box.bmp</file>
+        <file alias="man">man.bmp</file>
+        <file alias="box_1">box_1.bmp</file>
+    </qresource>
+</RCC>
