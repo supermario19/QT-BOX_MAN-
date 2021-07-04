@@ -10,7 +10,8 @@ enum Map { // 地图属性
     DES, // 目的地
     MAN, // 人
     BOX, // 箱子
-    HIT // 箱子到达目的地
+    HIT, // 箱子到达目的地
+    NUL = -1 // 记录上一个位置
 };
 
 #endif // MAP_H

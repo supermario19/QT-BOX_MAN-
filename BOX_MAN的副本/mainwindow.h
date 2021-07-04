@@ -3,6 +3,7 @@
 
 #include "map.h"
 #include "person.h"
+#include "postion.h"
 #include <QMainWindow>
 #include <QPaintEvent>
 #include <QPainter>
@@ -26,6 +27,7 @@
 #define MAN_PATH ":/images/man" // 人图片
 #define BOX_PATH ":/images/box" // 箱子图片
 #define BOX_1_PATH ":/images/box_1" // 箱子推到指定位置图片
+#define MAX_STEP 65 // 最大步数限制
 
 extern int map[LINE][COLUMN];
 
@@ -33,7 +35,9 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 private:
-    struct Person man;
+    struct Person man; // 人的位置
+    struct Postion pre_pos; // 之前的位置
+    int step;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -44,7 +48,12 @@ public:
 protected:
     void paintEvent(QPaintEvent *);
     void keyPressEvent(QKeyEvent *);
+public slots:
+    void gameOverControl();
+    void gameSuccessControl();
 signals:
     void change();
+    void gameover();
+    void gamesuccess();
 };
 #endif // MAINWINDOW_H

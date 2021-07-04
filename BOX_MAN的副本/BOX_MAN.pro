@@ -16,7 +16,8 @@ SOURCES += \
 HEADERS += \
     mainwindow.h \
     map.h \
-    person.h
+    person.h \
+    postion.h
 
 TRANSLATIONS += \
     BOX_MAN_zh_CN.ts
